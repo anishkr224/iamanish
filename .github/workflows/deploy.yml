@@ -9,7 +9,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
+
     permissions:
       contents: read
       pages: write
@@ -22,7 +22,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 7  # Specify your preferred pnpm version (adjust if needed)
+          version: 7  # Use the version of pnpm you prefer
 
       - name: Install dependencies
         run: pnpm install
@@ -42,3 +42,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         if: github.ref == 'refs/heads/main'
+        environment: github-pages  # Add this line to specify the environment

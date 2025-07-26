@@ -2,9 +2,9 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build-and-deploy:
@@ -16,20 +16,19 @@ jobs:
       id-token: write
     
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
         with:
-          node-version: '18'
-          cache: 'npm'
+          version: 7  # Specify your preferred pnpm version (adjust if needed)
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
-      - name: Build
-        run: npm run build
+      - name: Build project
+        run: pnpm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -43,4 +42,3 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         if: github.ref == 'refs/heads/main'
-

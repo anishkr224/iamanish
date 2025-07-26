@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    height: 100%;
+}
+
+
+.text-button {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .text-button:hover {
+    color: #333; /* Adjust hover color as needed */
+  }
+  
+  .text-button.active {
+    font-size: 1.4rem;
+    color: #000; /* Dark black color */
+  }
+
+ 
+
+  
+  

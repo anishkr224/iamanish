@@ -1,0 +1,7 @@
+/* card.css */
+
+.skill-section .card a {
+    text-decoration: none;
+    color: black; /* Remove underline from anchor elements */
+  }
+  

@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh; /* Use full viewport height */
+}
+
+.vertical-line {
+  border-left: 2px solid black;
+  margin: 20px; /* Optional, for spacing */
+}
+
+.name {
+  padding: 0; /* Set padding to 0 */
+  height: auto;
+}
+
+.text-button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.text-button:hover {
+  color: #333; /* Adjust hover color as needed */
+}
+
+.text-button.active {
+  font-size: 1.4rem;
+  color: #000; /* Dark black color */
+}
+
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column; /* Switch to vertical layout on small screens */
+  }
+
+  .vertical-line {
+    border-left: none;
+    border-top: 2px solid black; /* Switch to horizontal line */
+    width: 100%; /* Make the line span the width of the container */
+    height: auto; /* Reset height to auto */
+    margin: 20px 0; /* Adjust vertical margin */
+  }
+
+  /* .right {
+    height: auto; 
+    overflow-y: auto;
+  } */
+
+  .my-name-bio{
+    font-size: 40px;
+  }
+
+}

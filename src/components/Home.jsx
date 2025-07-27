@@ -21,7 +21,7 @@ function Home() {
         <button className="bw-button" onClick={handleBioClick}>
           Bio
         </button>
-        <a href="/Anish_Kumar_Resume.pdf" target="_blank" rel="noopener noreferrer">
+        <a href="/iamanish/Anish_Kumar_Resume.pdf" target="_blank" rel="noopener noreferrer">
           <button className="bw-button-resume" onClick={handleBioClick}>
             Resume
           </button>

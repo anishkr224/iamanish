@@ -1,6 +1,6 @@
 # Anish Kumar - Portfolio Website
 
-A modern, responsive portfolio website built with React.js, showcasing projects, skills, experience, and education. This is a fully functional clone of the original design, customized for Anish Kumar and optimized for deployment on GitHub Pages.
+A modern, responsive portfolio website built with React.js, showcasing projects, skills, experience, and education.
 
 ## 🌟 Features
 
@@ -23,39 +23,40 @@ Visit the live website: [https://anishkr224.github.io/iamanish/](https://anishkr
 anish-portfolio/
 ├── public/
 │   ├── img/                    # Static images and icons
-│   │   ├── logo/              # Social media and contact icons
-│   │   ├── marketplace/       # Project screenshots
-│   │   ├── newsapi/          # Project screenshots
-│   │   └── twitter/          # Project screenshots
-│   ├── favicon.ico           # Website favicon
-│   ├── index.html           # Main HTML template
-│   ├── manifest.json        # PWA manifest
-│   └── Anish_Kumar_Resume.pdf # Resume file
+│   │   ├── logo/               # Social media and contact icons
+│   │   ├── LLMinds/            # Project screenshots
+│   │   ├── SheShield/          # Project screenshots
+│   │   └── Text2MCQ/           # Project screenshots
+│   ├── 404.html                # HTML template: handle 404 (Page Not Found) errors
+│   ├── favicon.ico             # Website favicon
+│   ├── index.html              # Main HTML template
+│   ├── manifest.json           # PWA manifest
+│   └── Anish_Kumar_Resume.pdf  # Resume file
 ├── src/
-│   ├── components/          # React components
-│   │   ├── Home.jsx        # Homepage component
-│   │   ├── Bio.jsx         # Bio page with tabs
-│   │   ├── Projects.jsx    # Projects page
-│   │   ├── Contacts.jsx    # Contact information
-│   │   ├── MyNavbar.jsx    # Navigation bar
-│   │   ├── Social.jsx      # Social media links
-│   │   ├── Education.jsx   # Education section
-│   │   ├── Skills.jsx      # Skills section
-│   │   ├── Experiences.jsx # Experience section
-│   │   ├── Certificates.jsx # Certificates section
-│   │   └── ...            # Other components
-│   ├── css/               # Styling files
-│   │   ├── home.css       # Homepage styles
-│   │   ├── bio.css        # Bio page styles
-│   │   ├── projects.css   # Projects page styles
-│   │   └── ...           # Other CSS files
-│   ├── App.jsx           # Main App component
-│   ├── main.jsx          # Entry point
-│   └── index.css         # Global styles
-├── dist/                 # Production build (generated)
-├── package.json          # Dependencies and scripts
-├── vite.config.js       # Vite configuration
-└── README.md            # This file
+│   ├── components/             # React components
+│   │   ├── Home.jsx            # Homepage component
+│   │   ├── Bio.jsx             # Bio page with tabs
+│   │   ├── Projects.jsx        # Projects page
+│   │   ├── Contacts.jsx        # Contact information
+│   │   ├── MyNavbar.jsx        # Navigation bar
+│   │   ├── Social.jsx          # Social media links
+│   │   ├── Education.jsx       # Education section
+│   │   ├── Skills.jsx          # Skills section
+│   │   ├── Experiences.jsx     # Experience section
+│   │   ├── Certificates.jsx    # Certificates section
+│   │   └── ...                 # Other components
+│   ├── css/                    # Styling files
+│   │   ├── home.css            # Homepage styles
+│   │   ├── bio.css             # Bio page styles
+│   │   ├── projects.css        # Projects page styles
+│   │   └── ...                 # Other CSS files
+│   ├── App.jsx                 # Main App component
+│   ├── main.jsx                # Entry point
+│   └── index.css               # Global styles
+├── dist/                       # Production build (generated)
+├── package.json                # Dependencies and scripts
+├── vite.config.js              # Vite configuration
+└── README.md                   # This file
 ```
 
 ## 🛠️ Technologies Used
@@ -129,41 +130,6 @@ anish-portfolio/
 
 3. **Create GitHub Actions workflow**
    Create `.github/workflows/deploy.yml`:
-   ```yaml
-   name: Deploy to GitHub Pages
-
-   on:
-     push:
-       branches: [ main ]
-     pull_request:
-       branches: [ main ]
-
-   jobs:
-     build-and-deploy:
-       runs-on: ubuntu-latest
-       steps:
-         - name: Checkout
-           uses: actions/checkout@v4
-
-         - name: Setup Node.js
-           uses: actions/setup-node@v4
-           with:
-             node-version: '18'
-             cache: 'npm'
-
-         - name: Install dependencies
-           run: npm install
-
-         - name: Build
-           run: npm run build
-
-         - name: Deploy to GitHub Pages
-           uses: peaceiris/actions-gh-pages@v3
-           if: github.ref == 'refs/heads/main'
-           with:
-             github_token: ${{ secrets.GITHUB_TOKEN }}
-             publish_dir: ./dist
-   ```
 
 4. **Push to GitHub**
    ```bash
@@ -297,11 +263,10 @@ Edit `src/components/Certificates.jsx`:
 
 ### Updating Projects
 
-The projects are organized into three categories in separate components:
+The projects are organized into two categories in separate components:
 
-1. **Full Stack Projects** (`src/components/FullstackProjects.jsx`)
-2. **Frontend Projects** (`src/components/FrontendProjects.jsx`)
-3. **AI/ML/DL Projects** (`src/components/AIMLDLProjects.jsx`)
+1. **Data Science Projects** (`src/components/DataScienceProjects.jsx`)
+2. **Data Analysis Projects** (`src/components/DataAnalysis.jsx`)
 
 To add a new project:
 ```jsx
@@ -426,7 +391,7 @@ If you encounter any issues or have questions:
 1. Check the troubleshooting section above
 2. Search existing GitHub issues
 3. Create a new issue with detailed description
-4. Contact: [anishkumar@example.com](mailto:anishkumar@example.com)
+4. Contact: [anishkumar3967@gmail.com](mailto:anishkumar3967@gmail.com)
 
 ## 🙏 Acknowledgments
 
